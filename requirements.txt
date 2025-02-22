@@ -1,8 +1,7 @@
-Flask==3.0.0
-flask-cors==4.0.0
-flask-socketio==5.3.6
-requests==2.31.0
-beautifulsoup4==4.12.2
-yt-dlp==2024.4.9
-instaloader==4.11
-eventlet==0.33.3
+requests== 2.32.3
+Flask== 3.0.3
+flask-cors== 5.0.0
+beautifulsoup4==4.12.3
+yt-dlp== 2024.10.22
+flask-socketio==5.5.1
+instaloader==4.14.1
