@@ -33,6 +33,12 @@ DOWNLOAD_FOLDER.mkdir(exist_ok=True)
 # Initialize Instaloader object
 L = instaloader.Instaloader()
 
+
+@app.route("/")
+def home():
+    return "Hello, World!"
+
+
 @app.route('/download_reels', methods=['post'])
 def download_reels():
     """Flask route to download Instagram Reels video."""
