@@ -15,11 +15,11 @@ import instaloader
 from urllib.parse import urlparse, parse_qs
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:3000"])
+CORS(app, origins=["https://hddownloader.netlify.app"])
 
 
 # Initialize Flask-SocketIO
-socketio = SocketIO(app,cors_allowed_origins="*")
+socketio = SocketIO(app,cors_allowed_origins=["https://hddownloader.netlify.app"])
 
 # Global variable to track download progress
 download_progress = 0
@@ -262,4 +262,5 @@ def remove_playlist_from_url(playlist_url):
 
 
 if __name__ == '__main__':
-    socketio.run(app,host="0.0.0.0", port=5000)  # Run the Flask application with WebSocket
+    port = int(os.environ.get("PORT", 5000)) 
+    socketio.run(app,host="0.0.0.0", port=port)  # Run the Flask application with WebSocket

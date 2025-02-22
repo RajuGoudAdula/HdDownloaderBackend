@@ -6,3 +6,4 @@ yt-dlp== 2024.10.22
 flask-socketio==5.5.1
 instaloader==4.14.1
 gunicorn==23.0.0
+eventlet
